@@ -846,21 +846,25 @@
             }
             
              .research-detail-body {
-                flex-direction: column; /* 移动端改为垂直排列 */
+                display: flex !important; /* 强制使用flex布局 */
+                flex-direction: column !important; /* 强制垂直排列 */
                 gap: 30px;
             }
             
-            .research-detail-text,
-            .research-detail-image {
-                min-width: 100%; /* 移动端占满宽度 */
+            .research-detail-text {
+                order: 1; /* 文字在上 */
+                width: 100% !important;
             }
-            
+
             .research-detail-image {
-                max-width: 100%; /* 移动端图片占满可用空间 */
+                order: 2; /* 图片在下 */
+                width: 100% !important;
+                max-width: 100% !important;
             }
             
             .research-detail-image img {
-                max-height: 400px; /* 移动端图片高度稍小 */
+                max-height: 400px;
+                width: 100% !important;
             }       
 
             .profile-img {
