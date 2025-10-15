@@ -848,6 +848,7 @@
              .research-detail-body {
                 display: flex !important; /* 强制使用flex布局 */
                 flex-direction: column !important; /* 强制垂直排列 */
+                grid-template-columns: 1fr !important; /* pc端是grid，覆盖为单列 */
                 gap: 30px;
             }
             
@@ -860,6 +861,7 @@
                 order: 2; /* 图片在下 */
                 width: 100% !important;
                 max-width: 100% !important;
+                margin: 0 auto !important; /* 确保居中 */
             }
             
             .research-detail-image img {
